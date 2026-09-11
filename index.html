@@ -48,11 +48,12 @@
             letter-spacing: -0.02em;
         }
 
+        /* Unified Container Padding */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 1.25rem;
+            padding: 0 1.5rem;
         }
 
         .badge {
@@ -73,7 +74,7 @@
             background-color: var(--accent);
             color: #ffffff;
             padding: 0.85rem 1.75rem;
-            border-radius: 4px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -99,7 +100,7 @@
             color: #ffffff;
         }
 
-        /* Responsive Header */
+        /* Header Navigation */
         header {
             position: sticky;
             top: 0;
@@ -107,14 +108,13 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
+            padding: 1.25rem 0;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
 
         .logo {
@@ -129,7 +129,7 @@
 
         .nav-links {
             display: flex;
-            gap: 1.25rem;
+            gap: 1.5rem;
             list-style: none;
             align-items: center;
         }
@@ -143,10 +143,13 @@
 
         /* Hero Section */
         .hero {
-            padding: 2.5rem 0 4rem 0;
+            padding: 3rem 0;
+        }
+
+        .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 3.5rem;
             align-items: center;
         }
 
@@ -154,7 +157,6 @@
             font-size: 3.2rem;
             line-height: 1.15;
             margin-bottom: 1.25rem;
-            word-wrap: break-word;
         }
 
         .hero-text p {
@@ -169,10 +171,10 @@
 
         .hero-image {
             width: 100%;
-            height: 500px;
+            height: 520px;
             object-fit: cover;
             object-position: center 20%;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 15px 30px rgba(0,0,0,0.06);
             display: block;
         }
@@ -199,26 +201,26 @@
 
         /* About Section */
         .about {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background-color: #F4F0EB;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 3.5rem;
             align-items: center;
         }
 
         .about-image {
             width: 100%;
-            height: 400px;
+            height: 420px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
         .about-content h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 1.25rem;
         }
 
@@ -230,42 +232,42 @@
 
         /* Portfolio */
         .portfolio {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
 
         .section-header {
             text-align: center;
             max-width: 600px;
-            margin: 0 auto 2.5rem auto;
+            margin: 0 auto 3rem auto;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 0.5rem;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .gallery-item {
             background-color: var(--bg-card);
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 320px;
+            height: 340px;
             object-fit: cover;
             display: block;
         }
 
         .gallery-item-info {
-            padding: 1rem;
+            padding: 1.25rem;
         }
 
         .gallery-item-info h4 {
@@ -279,9 +281,9 @@
             text-transform: uppercase;
         }
 
-        /* Instagram */
+        /* Instagram Section */
         .instagram-section {
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
             background-color: var(--bg-card);
             border-top: 1px solid var(--border-color);
@@ -300,37 +302,37 @@
         .ig-placeholder-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0.75rem;
-            margin-top: 2rem;
+            gap: 1rem;
+            margin-top: 2.5rem;
         }
 
         .ig-placeholder-grid img {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
-        /* Newsletter */
+        /* Newsletter Section */
         .newsletter {
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
             background-color: var(--accent-light);
         }
 
         .newsletter-box {
-            max-width: 500px;
+            max-width: 520px;
             margin: 0 auto;
         }
 
         .newsletter h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 0.5rem;
         }
 
         .newsletter p {
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
             font-size: 0.95rem;
         }
 
@@ -343,7 +345,7 @@
             flex: 1;
             padding: 0.85rem 1rem;
             border: 1px solid var(--border-color);
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 0.9rem;
             outline: none;
         }
@@ -352,14 +354,14 @@
         footer {
             background-color: var(--text-main);
             color: #ffffff;
-            padding: 3rem 0 1.5rem 0;
+            padding: 4rem 0 2rem 0;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .footer-brand .logo {
@@ -394,16 +396,16 @@
             font-size: 0.8rem;
         }
 
-        /* Mobile Breakpoints */
+        /* Responsive Mobile Rules */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.85rem;
                 text-align: center;
             }
 
             .nav-links {
-                gap: 1rem;
+                gap: 1.2rem;
             }
 
             .nav-links a {
@@ -411,9 +413,12 @@
             }
 
             .hero {
+                padding: 2rem 0;
+            }
+
+            .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-                padding: 1.5rem 0 3rem 0;
             }
 
             .hero-text h1 {
@@ -424,6 +429,10 @@
                 height: 380px;
             }
 
+            .about {
+                padding: 3.5rem 0;
+            }
+
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -431,6 +440,10 @@
 
             .about-content h2 {
                 font-size: 2rem;
+            }
+
+            .portfolio, .instagram-section, .newsletter {
+                padding: 3.5rem 0;
             }
 
             .ig-placeholder-grid {
@@ -466,23 +479,26 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero container">
-        <div class="hero-text">
-            <span class="badge">Vero Beach, Florida</span>
-            <h1>Modern Hair Styling &amp; Dimensional Color</h1>
-            <p>Elevated, coastal beauty tailored to your natural movement and lifestyle. Specializing in lived-in blondes, precision cuts, and rich color transformations.</p>
-            
-            <a href="#updates" class="btn">Join Booking Waitlist</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Vero Beach, Florida</span>
+                    <h1>Modern Hair Styling &amp; Dimensional Color</h1>
+                    <p>Elevated, coastal beauty tailored to your natural movement and lifestyle. Specializing in lived-in blondes, precision cuts, and rich color transformations.</p>
+                    
+                    <a href="#updates" class="btn">Join Booking Waitlist</a>
 
-            <div class="status-banner">
-                <p><strong>Currently completing training at:</strong><br>
-                <a href="https://www.fpbeauty.com" target="_blank" rel="noopener">Beauty and Massage Institute of Vero Beach</a><br>
-                <em>Accepting select model client appointments for upcoming calendar release.</em></p>
+                    <div class="status-banner">
+                        <p><strong>Currently completing training at:</strong><br>
+                        <a href="https://www.fpbeauty.com" target="_blank" rel="noopener">Beauty and Massage Institute of Vero Beach</a><br>
+                        <em>Accepting select model client appointments for upcoming calendar release.</em></p>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/annika.jpg" alt="Annika May Hairstylist" class="hero-image">
+                </div>
             </div>
-        </div>
-        <div class="hero-image-wrapper">
-            <!-- Relative path fixed: assets/images/annika.jpg -->
-            <img src="assets/images/annika.jpg" alt="Annika May Hairstylist" class="hero-image">
         </div>
     </section>
 
@@ -503,33 +519,35 @@
     </section>
 
     <!-- Portfolio Gallery -->
-    <section class="portfolio container" id="portfolio">
-        <div class="section-header">
-            <span class="badge">Featured Portfolio</span>
-            <h2>Recent Transformations</h2>
-            <p>A look at recent styling, dimensional color, and precision cuts.</p>
-        </div>
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Featured Portfolio</span>
+                <h2>Recent Transformations</h2>
+                <p>A look at recent styling, dimensional color, and precision cuts.</p>
+            </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Sun-Kissed Balayage">
-                <div class="gallery-item-info">
-                    <h4>Sun-Kissed Balayage</h4>
-                    <p>Color &amp; Blonding</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Sun-Kissed Balayage">
+                    <div class="gallery-item-info">
+                        <h4>Sun-Kissed Balayage</h4>
+                        <p>Color &amp; Blonding</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Soft Layered Blowout">
-                <div class="gallery-item-info">
-                    <h4>Precision Layered Cut</h4>
-                    <p>Cut &amp; Styling</p>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Soft Layered Blowout">
+                    <div class="gallery-item-info">
+                        <h4>Precision Layered Cut</h4>
+                        <p>Cut &amp; Styling</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Dimensional Brunette">
-                <div class="gallery-item-info">
-                    <h4>Rich Dimensional Tone</h4>
-                    <p>Custom Color</p>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Dimensional Brunette">
+                    <div class="gallery-item-info">
+                        <h4>Rich Dimensional Tone</h4>
+                        <p>Custom Color</p>
+                    </div>
                 </div>
             </div>
         </div>
