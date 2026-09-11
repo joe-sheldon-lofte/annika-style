@@ -1,1 +1,589 @@
-<h1>Welcome to Annika.style</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annika May | Hair Stylist & Specialist | Vero Beach, FL</title>
+    
+    <!-- Google Fonts: Elegant Serif + Clean Sans-Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #FAF8F5; /* Warm Linen */
+            --bg-card: #FFFFFF;
+            --text-main: #2C3531; /* Soft Deep Slate */
+            --text-muted: #66706B;
+            --accent: #5B7065; /* Sage / Coastal Eucalyptus */
+            --accent-light: #EBF0EC;
+            --gold-subtle: #D4AF37;
+            --border-color: #E6E2DD;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #495A51;
+            border-color: #495A51;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-main);
+            color: #ffffff;
+        }
+
+        /* Header / Nav */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.2rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-main);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            object-position: center 20%; /* Ensures top-focused crop on her photo */
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* Notice Banner */
+        .status-banner {
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem 2rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .status-banner p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .status-banner a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background-color: #F4F0EB;
+            margin-top: 3rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-info {
+            padding: 1.2rem;
+        }
+
+        .gallery-item-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery-item-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Instagram Feed Section */
+        .instagram-section {
+            padding: 4rem 0 6rem 0;
+            text-align: center;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ig-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .ig-placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .ig-placeholder-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Newsletter / Updates Form */
+        .newsletter {
+            padding: 6rem 0;
+            text-align: center;
+            background-color: var(--accent-light);
+        }
+
+        .newsletter-box {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .newsletter p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: #ffffff;
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo {
+            color: #ffffff;
+        }
+
+        .footer-brand p {
+            color: #A0AAB0;
+            margin-top: 1rem;
+            max-width: 320px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #A0AAB0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7A858A;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero, .about-grid, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-image {
+                height: 420px;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .ig-placeholder-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">ANNIKA MAY</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#updates">Launch Updates</a></li>
+                    <li><a href="#contact" class="btn btn-outline" style="padding: 0.5rem 1.2rem;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-text">
+            <span class="badge">Vero Beach, Florida</span>
+            <h1>Modern Hair Styling &amp; Dimensional Color</h1>
+            <p>Elevated, coastal beauty tailored to your natural movement and lifestyle. Specializing in lived-in blondes, precision cuts, and rich color transformations.</p>
+            
+            <a href="#updates" class="btn">Join Booking Waitlist</a>
+
+            <div class="status-banner">
+                <p><strong>Currently completing training at:</strong><br>
+                <a href="https://www.fpbeauty.com" target="_blank" rel="noopener">Beauty and Massage Institute of Vero Beach</a><br>
+                <em>Accepting select model client appointments for upcoming calendar release.</em></p>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <!-- Annika's Personal Photo -->
+            <img src="/assets/images/annika.jpg" alt="Annika May Hairstylist" class="hero-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Annika Styling Hair" class="about-image">
+                <div class="about-content">
+                    <span class="badge">Meet the Stylist</span>
+                    <h2>Coastal Sophistication Meets Modern Technique</h2>
+                    <p>Hi, I’m Annika May. Growing up along Florida’s Treasure Coast, I’ve always held an appreciation for light, effortlessly chic aesthetics that hold up to our sun-drenched lifestyle.</p>
+                    <p>I combine modern color techniques with disciplined foundation cutting. Whether you are looking for a seamless balayage refresh or a complete style elevation, my goal is to give you healthy, manageable hair that radiates confidence.</p>
+                    <a href="#portfolio" class="btn btn-outline">Explore Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio container" id="portfolio">
+        <div class="section-header">
+            <span class="badge">Featured Portfolio</span>
+            <h2>Recent Transformations</h2>
+            <p>A look at recent styling, dimensional color, and precision cuts.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Sun-Kissed Balayage">
+                <div class="gallery-item-info">
+                    <h4>Sun-Kissed Balayage</h4>
+                    <p>Color &amp; Blonding</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Soft Layered Blowout">
+                <div class="gallery-item-info">
+                    <h4>Precision Layered Cut</h4>
+                    <p>Cut &amp; Styling</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Dimensional Brunette">
+                <div class="gallery-item-info">
+                    <h4>Rich Dimensional Tone</h4>
+                    <p>Custom Color</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <span class="badge">Follow Along</span>
+            <h2>On The Gram</h2>
+            <a href="https://instagram.com/annika.may.hairstylist" target="_blank" class="ig-handle">
+                @annika.may.hairstylist &rarr;
+            </a>
+
+            <!-- Once you have an Elfsight/Fouita embed script, replace this placeholder block -->
+            <div class="ig-placeholder-grid">
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=500&q=80" alt="IG Post 1">
+                <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=500&q=80" alt="IG Post 2">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="IG Post 3">
+                <img src="https://images.unsplash.com/photo-1522337094846-8a838593360b?auto=format&fit=crop&w=500&q=80" alt="IG Post 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Signup Section -->
+    <section class="newsletter" id="updates">
+        <div class="container">
+            <div class="newsletter-box">
+                <span class="badge">Grand Launch Coming Soon</span>
+                <h2>Be First in Line for Calendar Openings</h2>
+                <p>Subscribe to receive official notification when Annika’s full appointment calendar officially launches in Vero Beach.</p>
+                
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you! You are on the waitlist.');">
+                    <input type="email" placeholder="Enter your email address..." required>
+                    <button type="submit" class="btn">Join Waitlist</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">ANNIKA MAY</a>
+                    <p>Custom hair styling, dimensional color, and modern cutting serving Vero Beach, FL and the surrounding Treasure Coast.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Studio Location</h4>
+                    <p>Training at:</p>
+                    <p><strong>Beauty &amp; Massage Institute</strong></p>
+                    <p>Vero Beach, FL 32960</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Direct Contact</h4>
+                    <a href="mailto:hello@annika.style">hello@annika.style</a>
+                    <p>(772) 555-0199 <em>(Temp)</em></p>
+                    <a href="https://instagram.com/annika.may.hairstylist" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <script>document.write(new Date().getFullYear())</script> Annika May Hair. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
