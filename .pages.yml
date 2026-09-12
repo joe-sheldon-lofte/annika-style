@@ -23,6 +23,6 @@ content:
             label: Category
             type: select
             options:
-              - Color
-              - Cut
-              - Styling
+              - { label: "Color", value: "Color" }
+              - { label: "Cut", value: "Cut" }
+              - { label: "Styling", value: "Styling" }
