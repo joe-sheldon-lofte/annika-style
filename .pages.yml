@@ -23,9 +23,7 @@ content:
             label: Category
             type: select
             options:
-              - name: Color
-                label: Color
-              - name: Cut
-                label: Label Cut
-              - name: Styling
-                label: Styling
+              values:
+                - Color
+                - Cut
+                - Styling
