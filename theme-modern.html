@@ -11,17 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --bg-dark: #0F1110;
-            --bg-card: #181A19;
-            --text-light: #F4F4F2;
-            --text-muted: #8E9390;
-            --accent-glow: #C5A880;
-            --accent-sage: #8A9A86;
-            --border-glow: rgba(197, 168, 128, 0.2);
-            --font-display: 'Italiana', serif;
-            --font-body: 'Outfit', sans-serif;
-        }
+:root {
+    --text-light: #FFFFFF;       /* Crisp pure white */
+    --text-muted: #B3B8B5;       /* Lighter slate for high-contrast subtext */
+    --font-body: 'Outfit', sans-serif;
+}
+
+/* Force body text to medium weight for crisp legibility on dark backgrounds */
+body {
+    font-weight: 400; 
+}
+p {
+    font-weight: 400; 
+}
+
 
         * {
             box-sizing: border-box;
