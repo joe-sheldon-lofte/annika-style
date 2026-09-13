@@ -1,3 +1,9 @@
 {
-  "photos": "Photo!"
+  "photos": [
+    {
+      "image": "/assets/images/IMG_0623.jpeg",
+      "caption": "Full highlight & cut",
+      "category": "Styling"
+    }
+  ]
 }
